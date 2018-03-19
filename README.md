@@ -21,3 +21,8 @@ Menu items, Classic Controls, Widgets and Graphics items are copied at the launc
 The primary reason I am able to keep the TinyIDE footprint small is that the Tools palette is now contained in a horizontal scroller within the TinyIDE.
 
 Converted to Gui and scriptonly behaviors by bwmilby, thank you.
+
+__Installation__
+
+Download https://github.com/AndyPiddock/TinyIDE/archive/master.zip and extract to your working plugins directory and launch from the Development/Plugins menu of the standard LC IDE … done.
+Tip> use the Plugins Settings to start TinyIDE when LiveCode starts up.
