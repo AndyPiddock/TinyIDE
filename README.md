@@ -1,4 +1,7 @@
 # TinyIDE
+
+More details, user instructions https://2108.co.uk/tinyide/
+
 TinyIDE a Free alternative minimalist IDE Plugin for LiveCode.
 
 TinyIDE gives you more space to develop your ideas
