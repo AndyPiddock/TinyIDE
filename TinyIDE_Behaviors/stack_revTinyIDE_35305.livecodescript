@@ -18,7 +18,7 @@ on preOpenStack
    wait 2 seconds with messages
 end preOpenStack
 
-
+-- Add delay to allow slower startup times of LC V9
 on openStack
    put "revTinyIDE" into gStackName --live
    --put "TinyIDE" into gStackName --dev
