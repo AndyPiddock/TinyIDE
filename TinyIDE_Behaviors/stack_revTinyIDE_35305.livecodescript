@@ -14,11 +14,11 @@ global gStackName --used to set the stack name during debug and editlocal tToolt
 global gTooltPath --location of TinyIDETools folder
 global gToolsFiles --files in the TinyIDETools folder
 
+-- Add delay to allow slower startup times of LC V9
 on preOpenStack
    wait 2 seconds with messages
 end preOpenStack
 
--- Add delay to allow slower startup times of LC V9
 on openStack
    put "revTinyIDE" into gStackName --live
    --put "TinyIDE" into gStackName --dev
