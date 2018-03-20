@@ -7,40 +7,44 @@
 -- Icons - Gentalface Free Wireframe Toolbar Icons for GUI designers
 -- http://gentleface.com/free_icon_set.html
 
-global gStackYPos --for recording and reseting top postion 
+global gStackYPos --for recording and reseting top postion
 
 global gStackName --used to set the stack name during debug and editlocal tTooltPath
 
 global gTooltPath --location of TinyIDETools folder
 global gToolsFiles --files in the TinyIDETools folder
 
+on preOpenStack
+   wait 2 seconds with messages
+end preOpenStack
+
 
 on openStack
    put "revTinyIDE" into gStackName --live
    --put "TinyIDE" into gStackName --dev
-   
+
    --set time default
    put "0.0" into fld "timer" of card "CrdMain" of stack gStackName
-   
+
    --set revTinyIDE defaults
    put empty into fld "FldStatus" of card "CrdMain" of stack gStackName
-   
+
    --
-   
+
    --is mon1 offset set
    set the label of button "Monitor1TOffset" of card "CrdInfo" of stack gStackName  to the cpTopOffsetMon1 of stack gStackName
-   
+
    --is mon2 offset set
    set the label of button "Monitor2TOffset" of card "CrdInfo" of stack gStackName  to the cpTopOffsetMon2 of stack gStackName
-   
+
    --is docked offset set
    set the label of button "MonitorDTOffset" of card "CrdInfo" of stack gStackName  to the cpTopOffsetDocked of stack gStackName
-   
+
    --determine TinyIDE path
    GetStackPath
    --load Web and App lists
    LoadWebApps
-   
+
    lock screen
    --set the width of me to item 3 of the screenRect -20
    set the visible of stack "revTools" to false
@@ -57,10 +61,10 @@ on openStack
       send "mouseUp" to button "BtnLCIDE" of group "Layout" of card "CrdMain"
    end if
    unlock screen
-   
+
    insert the script of button "BtnFSHoverInfo" of card "CrdInfo" of stack gStackName into back
    ideSubscribe "ideToolChanged"
-   
+
    --initializeIcons
    --send "initializeIcons" to stack gStackName in 0 ms
 end openStack
@@ -81,10 +85,10 @@ on LoadWebApps
    repeat with tCount = 1 to the number of lines of fld "FldLaunchList" of card "CrdInfo" of stack gStackName
       put item 1 of line tCount of fld "FldLaunchList" of card "CrdInfo" of stack gStackName & return after tNameList
    end repeat
-   
+
    LoadTinyIDETools
    put "-" & return & gToolsFiles after tNameList
-   
+
    set the text of button "BtnLinks" of card "CrdMain" of stack gStackName to tNameList
 end LoadWebApps
 
@@ -101,9 +105,9 @@ end LoadTinyIDETools
 
 on GetStackPath
    local tPath
-   put the effective filename of me into tPath 
-   set the itemDel to "/" 
-   delete last item of tPath 
+   put the effective filename of me into tPath
+   set the itemDel to "/"
+   delete last item of tPath
    set the defaultFolder to tPath
 end GetStackPath
 
@@ -111,7 +115,7 @@ end GetStackPath
 on resizeStack
    local tULeft
    local tURight
-   
+
    lock screen
    --main
    set the right of button "BtnExit" of card "CrdMain" to the right of card "CrdMain" -2
@@ -124,12 +128,12 @@ on resizeStack
    set the height of grp "UBarTools" of card "CrdMain" to 42
    set the top of grp "UBarTools" of card "CrdMain" to -1
    set the right of fld "LblVersion" of card "CrdMain" to the right of card "CrdMain" -2
-   
+
    --settings/info
    set the right of button "BtnSaveStack" of card "CrdInfo" to the right of card "CrdInfo" -20
    set the right of button "Btn2108Web" of card "CrdInfo" to the left of button "BtnSaveStack" of card "CrdInfo" -4
    set the right of button "BtnCloseInfo" of card "CrdInfo" to the left of button "Btn2108Web" of card "CrdInfo" -4
-   
+
    set the width of fld "FldStatus" of card "CrdMain" to item 3 of line 1 of the working screenRects -20
    set the left of fld "FldStatus" of card "CrdMain" to the left of card "CrdMain"
    unlock screen
