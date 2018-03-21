@@ -13,11 +13,12 @@ global gStackName --used to set the stack name during debug and editlocal tToolt
 
 global gTooltPath --location of TinyIDETools folder
 global gToolsFiles --files in the TinyIDETools folder
+global gVersion --contains the version number 1.3.1
 
+-- Add delay to allow slower startup times of LC V9 1.3.1
 on preOpenStack
    wait 2 seconds with messages
 end preOpenStack
-
 
 on openStack
    put "revTinyIDE" into gStackName --live
@@ -29,7 +30,8 @@ on openStack
    --set revTinyIDE defaults
    put empty into fld "FldStatus" of card "CrdMain" of stack gStackName
 
-   --
+   --set the version number 1.3.1
+   put gVersion into fld "LblVersion" of card "CrdMain" of stack gStackName
 
    --is mon1 offset set
    set the label of button "Monitor1TOffset" of card "CrdInfo" of stack gStackName  to the cpTopOffsetMon1 of stack gStackName
