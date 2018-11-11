@@ -9,17 +9,20 @@ on mouseEnter
    if the mouseStack contains "rev" is false then
       if the mouseStack is not gStackName then
          if the mouseStack is not "CodePeek" then
-            put the number of lines of the script of the target into tSL
-            
-            if the cpCodePeek of stack gStackName is "true" then
-               if the openStacks contains "CodePeek" is false then
-                  open stack "CodePeek"
+            try
+               put the number of lines of the script of the target into tSL
+               if the cpCodePeek of stack gStackName is "true" then
+                  if the openStacks contains "CodePeek" is false then
+                     open stack "CodePeek"
+                     put the script of the target into fld "CodeList" of stack "CodePeek"
+                  end if
                   put the script of the target into fld "CodeList" of stack "CodePeek"
                end if
-               put the script of the target into fld "CodeList" of stack "CodePeek"
-            end if
-           
-            put the long name of the target & "  id "& the id of the target &"  z="& the Layer of the target & "   x="& the left of the target &"   y="& the top of the target &"   w="& the width of the target & "   h="& the height of the target& "  sc="&tSL  into fld "FldStatus" of card "CrdMain" of stack gStackName
+               
+               put the long name of the target & "  id "& the id of the target &"  z="& the Layer of the target & "   x="& the left of the target &"   y="& the top of the target &"   w="& the width of the target & "   h="& the height of the target& "  sc="&tSL  into fld "FldStatus" of card "CrdMain" of stack gStackName
+            catch errorMess
+               
+            end try
          end if
       end if
    end if
