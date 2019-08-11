@@ -118,24 +118,25 @@ on resizeStack
 
    lock screen
    --main
-   set the right of button "BtnExit" of card "CrdMain" to the right of card "CrdMain" -2
-   set the right of button "BtnInfo" of card "CrdMain" to the left of button "BtnExit" of card "CrdMain" -2
-   set the right of grp "Timer" of card "CrdMain" to the left of button "BtnInfo" of card "CrdMain" -2
-   put the left of grp "Timer" of card "CrdMain" -2 into tURight
-   put the right of grp "EditTools" of card "CrdMain" +2 into tULeft
-   set the width of grp "UBarTools" of card "CrdMain" to tURight-tULeft
-   set the left of grp "UBarTools" of card "CrdMain" to the right of grp "EditTools" of card "CrdMain" +2
-   set the height of grp "UBarTools" of card "CrdMain" to 42
-   set the top of grp "UBarTools" of card "CrdMain" to -1
-   set the right of fld "LblVersion" of card "CrdMain" to the right of card "CrdMain" -2
+   set the right of button "BtnExit" of card "CrdMain" of stack gStackName to the right of card "CrdMain" of stack gStackName -2
+   set the right of button "BtnInfo" of card "CrdMain" of stack gStackName to the left of button "BtnExit" of card "CrdMain" of stack gStackName -2
+   set the right of grp "Timer" of card "CrdMain" of stack gStackName to the left of button "BtnInfo" of card "CrdMain" of stack gStackName -2
+   put the left of grp "Timer" of card "CrdMain" of stack gStackName -2 into tURight
+   put the right of grp "EditTools" of card "CrdMain" of stack gStackName +2 into tULeft
+   set the width of grp "UBarTools" of card "CrdMain" of stack gStackName to tURight-tULeft
+   set the left of grp "UBarTools" of card "CrdMain" of stack gStackName to the right of grp "EditTools" of card "CrdMain" of stack gStackName +2
+   set the height of grp "UBarTools" of card "CrdMain" of stack gStackName to 42
+   set the top of grp "UBarTools" of card "CrdMain" of stack gStackName to -1
+   set the right of fld "LblVersion" of card "CrdMain" of stack gStackName to the right of card "CrdMain" of stack gStackName -2
+
 
    --settings/info
-   set the right of button "BtnSaveStack" of card "CrdInfo" to the right of card "CrdInfo" -20
-   set the right of button "Btn2108Web" of card "CrdInfo" to the left of button "BtnSaveStack" of card "CrdInfo" -4
-   set the right of button "BtnCloseInfo" of card "CrdInfo" to the left of button "Btn2108Web" of card "CrdInfo" -4
+   set the right of button "BtnSaveStack" of card "CrdInfo" of stack gStackName to the right of card "CrdInfo" of stack gStackName -20
+   set the right of button "Btn2108Web" of card "CrdInfo" of stack gStackName to the left of button "BtnSaveStack" of card "CrdInfo" of stack gStackName -4
+   set the right of button "BtnCloseInfo" of card "CrdInfo" of stack gStackName to the left of button "Btn2108Web" of card "CrdInfo" of stack gStackName -4
 
-   set the width of fld "FldStatus" of card "CrdMain" to item 3 of line 1 of the working screenRects -20
-   set the left of fld "FldStatus" of card "CrdMain" to the left of card "CrdMain"
+   set the width of fld "FldStatus" of card "CrdMain" of stack gStackName to item 3 of line 1 of the working screenRects -20
+   set the left of fld "FldStatus" of card "CrdMain" of stack gStackName to the left of card "CrdMain" of stack gStackName
    unlock screen
 end resizeStack
 
