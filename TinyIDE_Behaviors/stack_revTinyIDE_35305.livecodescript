@@ -124,7 +124,7 @@ on resizeStack
    put the left of grp "Timer" of card "CrdMain" of stack gStackName -2 into tURight
    put the right of grp "EditTools" of card "CrdMain" of stack gStackName +2 into tULeft
    set the width of grp "UBarTools" of card "CrdMain" of stack gStackName to tURight-tULeft
-   set the left of grp "UBarTools" of card "CrdMain" of stack gStackName to the right of grp "EditTools" of card "CrdMain" of stack gStackName +2
+   set the left of grp "UBarTools" of card "CrdMain" of stack gStackName to the right of grp "EditTools" of card "CrdMain" of stack gStackName +24
    set the height of grp "UBarTools" of card "CrdMain" of stack gStackName to 42
    set the top of grp "UBarTools" of card "CrdMain" of stack gStackName to -1
    set the right of fld "LblVersion" of card "CrdMain" of stack gStackName to the right of card "CrdMain" of stack gStackName -2
