@@ -175,8 +175,7 @@ repeat for each line theLine in tScript
 switch
 case word 1 of theLine begins with "--" or word 1 of theLine begins with "#"
 # comment line
-put tSNAME & theLine & tENAME & "
-" after tHTML
+put tSNAME & theLine & tENAME & "" after tHTML
 break
 
      case theLine contains "end if" or \
