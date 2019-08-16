@@ -28,6 +28,9 @@ on openStack
 
    --set revTinyIDE defaults
    put empty into fld "FldStatus" of card "CrdMain" of stack gStackName
+   
+   --set version number
+   put "TinyIDE V1.4" into fld "LblVersion" of card "CrdMain" of stack gStackName
 
    --
 
