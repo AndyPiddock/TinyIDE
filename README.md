@@ -24,6 +24,23 @@ The primary reason I am able to keep the TinyIDE footprint small is that the Too
 
 Converted to Gui and scriptonly behaviors by bwmilby, thank you.
 
+16-08-2019 - Allan, axsoft has made the following useful additions, thank you.
+
+Added script coloring to code peek window
+when hovering over an object added key down detection
+Cmd/Ctrl key down shows the text property of the object
+Option/Alt key down show the custom properties of the object
+Cmd/Ctrl and Shift keys down shows the Card script
+Option/Alt and Shift keys down shows the Stack Script 
+See script button_BtnFSHoverInfo_13660 modified below
+
+Added two buttons 'Code' and 'Inspector' to the toolbar to quickly bring up card and stack code and properties
+Code button
+View stack & card scripts. With Cmd/Ctrl opens card script, with Option/Alt opens stack script
+Inspector button
+Open stack & card inspectors. With Cmd/Ctrl opens card inspector, with Option/Alt opens stack inspector
+
+
 __Installation__
 
 Download https://github.com/AndyPiddock/TinyIDE/archive/master.zip and extract to your working plugins directory and launch from the Development/Plugins menu of the standard LC IDE … done.
