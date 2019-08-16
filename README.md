@@ -1,6 +1,6 @@
 # TinyIDE
 
-![TinyIDE](https://2108.co.uk/TinyIDE/TinyIDE-Win.PNG)
+![TinyIDE](https://2108.co.uk/TinyIDE/TinyIDE-Win2.PNG)
 
 More details, user instructions https://2108.co.uk/tinyide/
 
