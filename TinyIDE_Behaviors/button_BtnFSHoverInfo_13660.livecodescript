@@ -1,4 +1,4 @@
-﻿script "button_BtnFSHoverInfo_13660"
+script "button_BtnFSHoverInfo_13660"
 global gStackName
 local tSL
 local tSC
@@ -103,8 +103,14 @@ on mouseEnter
               # no keys held down show script of control
               set the backgroundcolor of fld "CodeList" of stack "CodePeek" to "black"
               try
-                 put "OBJECT SCRIPT" & cr & the script of the target into tScript
-                 put the number of lines of the script of the target into tSL
+                  if the icon of button "Select Grouped" of stack "revMenuBar" is 101046 then
+                    # Select Groupd is on
+                    put "GROUP SCRIPT" & cr & the script of gGroupID into tScript
+                    put the number of lines of the script of gGroupID into tSL
+                 else
+                    put "OBJECT SCRIPT" & cr & the script of the target into tScript
+                    put the number of lines of the script of the target into tSL
+                 end if
                  
                  if the cpCodePeek of stack gStackName is "true" then
                     if the openStacks contains "CodePeek" is false then
