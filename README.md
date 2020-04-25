@@ -1,5 +1,7 @@
 # TinyIDE
 
+## April 2020, please use the the single stack version in the LiveCode IDE
+
 ![TinyIDE](https://2108.co.uk/TinyIDE/TinyIDE-Win2.PNG)
 
 More details, user instructions https://2108.co.uk/tinyide/
