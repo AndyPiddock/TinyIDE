@@ -4,7 +4,7 @@
 
 V1.4.1 Added width resize buttons with left mouse down, object info is now always shown, object info now acts as a drag stack with left mouse down.
 
-![TinyIDE](https://2108.co.uk/TinyIDE/TinyIDE-Win2.PNG)
+![TinyIDE](https://2108.co.uk/TinyIDE/TinyIDE-Win3.PNG)
 
 More details, user instructions https://2108.co.uk/tinyide/
 
