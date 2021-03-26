@@ -1,6 +1,8 @@
 # TinyIDE
 
-## April 2020, please use the the single stack version in the LiveCode IDE
+## March 2021, only the single stack version is now available 
+
+V1.4.1 Added width resize buttons with left mouse down, object info is now always shown, object info now acts as a drag stack with left mouse down.
 
 ![TinyIDE](https://2108.co.uk/TinyIDE/TinyIDE-Win2.PNG)
 
@@ -23,8 +25,6 @@ No standard LC IDE files are changed when using TinyIDE.
 Menu items, Classic Controls, Widgets and Graphics items are copied at the launch of the TinyIDE plugin, so it should keep up to date as new widgets or LC Menu items are added to the standard LC IDE.
 
 The primary reason I am able to keep the TinyIDE footprint small is that the Tools palette is now contained in a horizontal scroller within the TinyIDE.
-
-Converted to Gui and scriptonly behaviors by bwmilby, thank you.
 
 16-08-2019 - Allan, axsoft has made the following useful additions, thank you.
 
